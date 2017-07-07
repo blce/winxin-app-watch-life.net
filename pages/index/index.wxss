@@ -1,14 +1,3 @@
-/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- * Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- */
-
 .index-header {
   padding: 10rpx 0;
   text-align: center;
@@ -42,37 +31,6 @@
   font-size: 14px;
 }
 
-/*slide-menu*/
-
-.slide-mask {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 800;
-}
-
-.slide-menu {
-  position: fixed;
-  top: 2rpx;
-  background: #fff;
-  z-index: 900;
-}
-
-/*.slide-menu .slide-inner {
-  padding: 40rpx;
-}*/
-
-.slide-menu .header {
-  background: #21759b;
-  height: 40rpx;
-  color: #fff;
-  padding: 40rpx 40rpx 40rpx 40rpx;
-  margin-bottom: 0rpx;
-}
-
 .toolbar {
   height: 100rpx;
   padding-top: 25rpx;
@@ -100,26 +58,6 @@
   width: 50rpx;
 }
 
-.slide-menu .menu-item {
-  position: relative;
-  height: 100rpx;
-  line-height: 100rpx;
-  padding: 0 40rpx;
-  font-size: 35rpx;
-}
-
-.slide-menu .menu-item:active {
-  background: #fafafa;
-}
-
-.slide-menu .menu-item image {
-  position: absolute;
-  top: 25rpx;
-  left: 15rpx;
-  width: 50rpx;
-  height: 50rpx;
-}
-
 .home-icon {
   position: absolute;
   top: 25rpx;
@@ -129,18 +67,6 @@
 .home-text {
   position: absolute;
   left: 100rpx;
-}
-
-.slide-menu .home {
-  color: #019dd6;
-  background: rgba(0, 0, 0, 0.10);
-}
-
-.slide-menu .close-btn {
-  position: absolute;
-  top: 20rpx;
-  right: 20rpx;
-  z-index: 1000;
 }
 
 .search-input {
@@ -172,7 +98,7 @@
 
 .common-list .list-item {
   position: relative;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1rpx solid #eee;
   padding: 20rpx;
   min-height: 150rpx;
   overflow: hidden;
@@ -188,6 +114,7 @@
   top: 20rpx;
   width: 150rpx;
   height: 150rpx;
+  border-radius: 10rpx;
 }
 
 .common-list .list-item.has-img .content-title {
@@ -195,7 +122,7 @@
 }
 
 .common-list .list-item.has-img .content-title text {
-  font-size: 40rpx;
+  font-size: 36rpx;
   line-height: 1.2;
   font-weight: normal;
   text-overflow: -o-ellipsis-lastline;
@@ -214,15 +141,16 @@
   position: absolute;
   left: 200rpx;
   top: 140rpx;
-  width: 32rpx;
-  height: 32rpx;
+  width: 24rpx;
+  height: 24rpx;
 }
 
 .common-list .list-item .content-date text {
   position: absolute;
-  left: 250rpx;
-  top: 150rpx;
-  font-size: 20rpx;
+  left: 240rpx;
+  top: 140rpx;
+  color: #999;
+  font-size: 24rpx;
   line-height: 1.2;
   font-weight: normal;
 }

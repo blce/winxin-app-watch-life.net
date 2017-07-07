@@ -1,12 +1,11 @@
 /*
- * 
  * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- * 
+ * 开源协议：MIT
+ * Author: 蓝冰
+ * Author URI: http://blce.me
+ * Version: 1.0
+ * github: https://github.com/blce/wordpress2weixin
+ * 感谢源码支持: https://www.watch-life.net
  */
 
 App({

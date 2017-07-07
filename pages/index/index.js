@@ -1,19 +1,7 @@
-/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- * 
- *  *Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- */
-
 var Api = require('../../utils/api.js');
 var util = require('../../utils/util.js');
 var WxParse = require('../../wxParse/wxParse.js');
-
+var app = getApp()
 
 Page({
   data: {
@@ -37,17 +25,6 @@ Page({
     floatDisplay: "none",
 
 
-    //  侧滑菜单
-    maskDisplay: 'none',
-    slideHeight: 0,
-    slideRight: 0,
-    slideWidth: 0,
-    slideDisplay: 'block',
-    screenHeight: 0,
-    screenWidth: 0,
-    slideAnimation: {}
-
-
   },
   formSubmit: function (e) {
     var url = '../list/list'
@@ -60,7 +37,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '“守望轩”网站微信小程序',
+      title: '金滔的小程序',
       path: 'pages/index/index',
       success: function (res) {
         // 转发成功
@@ -90,7 +67,16 @@ Page({
     }
 
     this.fetchTopFivePosts();
-    
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (userInfo) {
+      //更新数据
+      self.setData({
+        userInfo: userInfo
+      })
+
+      wx.setStorageSync("userInfo", userInfo)
+
+    });
 
     wx.getSystemInfo({
       success: function (res) {
@@ -180,13 +166,6 @@ Page({
 
         if (response.statusCode === 200) {
 
-          if (response.data.length<6)
-          {
-            self.setData({
-              isLastPage: true
-            });
-          }
-
           //console.log(response);       
           self.setData({
             //postsList: response.data
@@ -212,11 +191,11 @@ Page({
 
           setTimeout(function () {
             wx.hideLoading();
-            wx.showToast({
-              title: '加载完毕',
-              icon: 'success',
-              duration: 900
-            })
+            // wx.showToast({
+            //   title: '加载完毕',
+            //   icon: 'success',
+            //   duration: 900
+            // })
           }, 900)
          
 
@@ -255,7 +234,7 @@ Page({
     });
   },
   //底部刷新
-  loadMore: function (e) {
+  lower: function (e) {
     
     var self = this;
     if (!self.data.isLastPage)
@@ -334,57 +313,6 @@ Page({
     });
   },
 
-
-  //浮动球移动事件
-  ballMoveEvent: function (e) {
-    var touchs = e.touches[0];
-    var pageX = touchs.pageX;
-    var pageY = touchs.pageY;
-    if (pageX < 25) return;
-    if (pageX > this.data.screenWidth - 25) return;
-    if (this.data.screenHeight - pageY <= 25) return;
-    if (pageY <= 25) return;
-    var x = this.data.screenWidth - pageX - 25;
-    var y = this.data.screenHeight - pageY - 25;
-    this.setData({
-      ballBottom: y,
-      ballRight: x
-    });
-  },
-
-  //浮动球点击 侧栏展开
-  ballClickEvent: function () {
-    slideUp.call(this);
-  },
-
-  //遮罩点击  侧栏关闭
-  slideCloseEvent: function () {
-    slideDown.call(this);
-  }
-
 })
 
-//侧栏展开
-function slideUp() {
-  var animation = wx.createAnimation({
-    duration: 600
-  });
-  this.setData({ maskDisplay: 'block' });
-  animation.translateX('100%').step();
-  this.setData({
-    slideAnimation: animation.export()
-  });
-}
-
-//侧栏关闭
-function slideDown() {
-  var animation = wx.createAnimation({
-    duration: 800
-  });
-  animation.translateX('-100%').step();
-  this.setData({
-    slideAnimation: animation.export()
-  });
-  this.setData({ maskDisplay: 'none' });
-}
 

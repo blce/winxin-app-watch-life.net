@@ -1,0 +1,15 @@
+.container { padding:10rpx; }
+.flex-wrp{
+  margin: 0 0 60rpx 0;
+  display:flex;
+}
+.flex-item{
+  width: 50%;
+  margin:0 10rpx;
+  box-shadow:0 30rpx 50rpx #ddd;
+  border-radius:20rpx;
+  font-size: 26rpx;
+  background: #fff;
+}
+image { width:100%; height: 320rpx; border-radius:20rpx 20rpx 0 0; }
+.content-title { padding: 20rpx; text-align: center; font-size:30rpx; }

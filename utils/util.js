@@ -1,14 +1,3 @@
-/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- * Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- */
-
 function formatTime(date) {
   var year = date.getFullYear()
   var month = date.getMonth() + 1
@@ -124,34 +113,12 @@ function cutstr(str, len,flag) {
     }
   }
 
-  /* 
- * 判断图片类型 
- */  
-function checkImgType(filePath){  
-  if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/.test(filePath)) {
-       return false;
-  }
-  else{
-    return true;
-  }   
-}
-
-// 是否为空对象
-function isEmptyObject(e) {
-  var t;
-  for (t in e)
-    return !1;
-  return !0
-}
-
 module.exports = {
   formatTime: formatTime,
   getDateDiff: getDateDiff,
   cutstr:cutstr,
   removeHTML:removeHTML,
   formatDateTime: formatDateTime,
-  compare: compare,
-  checkImgType: checkImgType,
-  isEmptyObject: isEmptyObject
+  compare: compare
   
 }

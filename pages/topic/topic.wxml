@@ -1,0 +1,123 @@
+<!--<navigator url="/pages/about/about">关于</navigator>-->
+<view class="container">
+
+  <navigator data-item="学习笔记" data-id="16" bindtap="redictIndex" hover-class="none">
+    <view class="list-item has-img">
+      <view class="content-thumbnail">
+      <image mode="widthFix"  src="https://api.jintao.me/weixin/zhuanti_1.jpg" class="cover"></image>
+      </view>
+      <view class="content-main">
+        <view class="content-title">
+          <text>学习笔记</text>
+        </view>
+        <view class="content-sub">
+          <text>好好学习，天天向上！</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+
+  <navigator data-item="资料共享" data-id="4" bindtap="redictIndex" hover-class="none">
+    <view class="list-item has-img">
+      <view class="content-thumbnail">
+      <image mode="widthFix"  src="https://api.jintao.me/weixin/zhuanti_2.jpg" class="cover"></image>
+      </view>
+      <view class="content-main">
+      <view class="content-title">
+        <text>资料共享</text>
+      </view>
+      <view class="content-sub">
+        <text>互联网的可贵就在于它的分享精神</text>
+      </view>
+      </view>
+    </view>
+  </navigator>
+
+</view>
+
+<!--<block wx:key="id" wx:for="{{categoriesList}}">
+
+	<navigator data-item="{{item.name}}" data-id="{{item.id}}" bindtap="redictIndex" >
+    <view class="list-item has-img">
+      <view class="content-thumbnail">
+      <image mode="widthFix"  src="{{item.cat_thumb}}" class="cover"></image>
+      </view>
+      <view class="content-main">
+      <view class="content-title">
+        <text>{{item.name}}</text>
+      </view>
+      <view class="content-sub">
+        <text>{{item.description}}</text>
+      </view>
+      </view>
+    </view>
+  </navigator> 
+
+</block>-->
+
+
+  <!-- 侧滑菜单-->
+<!--
+  <view class="slide-mask" style="display:{{maskDisplay}}" bindtap="slideCloseEvent"></view>
+  <view class="slide-menu" style="right: {{slideRight}}px;width: {{slideWidth}}px;height:{{slideHeight}}px;" animation="{{slideAnimation}}">
+    <scroll-view scroll-y="true" style="height:100%;width:100%">
+      <view class="header">
+        <icon type="cancel" size="30" class="close-btn" color="#FFF" bindtap="slideCloseEvent" />
+      </view>
+
+      <view class="slide-inner">
+        <view class="search-section">
+          <form catchsubmit="formSubmit" catchreset="formReset">
+            <view class="search-pancel">
+              <input value="" name="input" class="search-input" placeholder="请输入搜索内容..." />
+              <button class="search-button" form-type="submit" size="mini" plain="true">搜索</button>
+            </view>
+          </form>
+        </view>
+        <block wx:key="id" wx:for="{{categoriesList}}">
+          <view class="menu-item" data-item="{{item.name}}" data-id="{{item.id}}" bindtap="redictIndex">
+            <image src="../../images/folder.png"></image>
+            <text class="home-text">
+              <text>{{item.name}}({{item.count}})</text>
+            </text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  -->
+  <!-- 侧滑菜单  -->
+
+  <!-- 
+
+**************************************
+*************   代码解释   *************
+**************************************
+{{categoriesList}}    不用理会啦
+{{item.id}}           分类ID，手动设置时可以自定义
+{{item.name}}         分类名称，手动设置时可以自定义
+{{item.cat_thumb}}    分类特色图像，作者使用定制的JSON拉取的
+{{item.description}}  分类摘要，手动设置时可以自定义
+
+
+**************************************
+********   可参考我的自定义代码   ********
+**************************************
+
+<navigator url="../../pages/project/project?categoryID=3&categoryName=摄影技巧&categoryIMG=https://biji.la/pic/sites/2/wx_thumb/zhuanti_1.jpg" >
+     <view class="list-item has-img">
+        <view class="content-thumbnail">
+        <image mode="widthFix"  src="https://biji.la/pic/sites/2/wx_thumb/zhuanti_1.jpg" class="cover"></image>
+        </view>
+        <view class="content-main">
+        <view class="content-title">
+          <text>摄影技巧</text>
+        </view>
+        <view class="content-sub">
+          <text>关于摄影的小知识都在这里</text>
+        </view>
+        </view>
+      </view>
+</navigator> 
+
+-->

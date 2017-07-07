@@ -1,0 +1,51 @@
+<view class="container">
+<view class="section">
+
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item">
+      <navigator url="/pages/pic-app/pic-app" hover-class="none">
+        <view class="content-icon">
+          <image mode="aspectFill"  src="https://api.jintao.me/weixin/icon1.jpg"></image>
+        </view>
+        <view class="content-title">
+          <text>APP</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="flex-item">
+      <navigator url="/pages/pic-web/pic-web" hover-class="none">
+        <view class="content-icon">
+          <image mode="aspectFill"  src="https://api.jintao.me/weixin/icon2.jpg"></image>
+        </view>
+        <view class="content-title">
+          <text>WEB</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item">
+      <navigator url="/pages/pic-icon/pic-icon" hover-class="none">
+        <view class="content-icon">
+          <image mode="aspectFill"  src="https://api.jintao.me/weixin/icon3.jpg"></image>
+        </view>
+        <view class="content-title">
+          <text>ICON</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="flex-item">
+      <navigator url="/pages/pic-other/pic-other" hover-class="none">
+        <view class="content-icon">
+          <image mode="aspectFill"  src="https://api.jintao.me/weixin/icon4.jpg"></image>
+        </view>
+        <view class="content-title">
+          <text>OTHER</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+</view> 
+</view>

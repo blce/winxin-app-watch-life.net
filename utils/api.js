@@ -1,15 +1,4 @@
-/*
- * 
- * WordPres版微信小程序
- * author: jianbo
- * organization: 守望轩  www.watch-life.net
- * github:    https://github.com/iamxjb/winxin-app-watch-life.net
- * 技术支持微信号：iamxjb
- * 开源协议：MIT
- * Copyright (c) 2017 https://www.watch-life.net All rights reserved.
- */
-
-var HOST_URI = 'https://www.watch-life.net/wp-json/wp/v2/';
+var HOST_URI = 'https://blce.me/wp-json/wp/v2/';
 
 
 module.exports = {
@@ -61,8 +50,8 @@ module.exports = {
     return HOST_URI + 'categories?per_page=50&orderby=count&order=desc'
   },
   //获取评论
-  getComments: function (obj) {
-    return HOST_URI + 'comments?per_page=6&orderby=date&order=asc&post=' + obj.postID + '&page=' + obj.page
+  getComments: function (id, obj) {
+    return HOST_URI + 'comments?per_page=100&orderby=date&order=asc&post=' + id
   },
 
   //获取最近的50个评论
@@ -81,7 +70,7 @@ module.exports = {
   getContentFirstImage: function (content){
     var regex = /<img.*?src=[\'"](.*?)[\'"].*?>/i;
     var arrReg = regex.exec(content);
-    var src ="../../images/watch-life-logo-128.jpg";
+    var src ="../../images/img.png";
     if(arrReg){   
       src=arrReg[1];
     }

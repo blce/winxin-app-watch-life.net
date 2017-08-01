@@ -1,3 +1,5 @@
+@import "../../wxParse/wxParse.wxss";
+
 .detail-contain { width: auto; padding:0 20rpx; }
 .entry-date {
   color: #999;
